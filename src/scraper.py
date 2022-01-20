@@ -8,7 +8,7 @@ DRIVER = "~/path/to/your/chrome/driver/"
 driver = webdriver.Chrome(DRIVER)
 
 BASE = "https://www.senato.it/"
-NUM_LEGISTLATURES = 18
+NUM_LEGISLATURES = 18
 
 
 FILENAME = "../data/it-parliamentary-groups-senate.txt"
@@ -20,7 +20,7 @@ def get_legislature_urls(base):
     """
     urls = []
     base = base + "/leg/"
-    for leg in range(1, NUM_LEGISTLATURES + 1):
+    for leg in range(1, NUM_LEGISLATURES + 1):
         leg = str(leg)
         if len(leg) < 2:
             leg = "0" + leg
